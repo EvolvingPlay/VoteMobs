@@ -1,0 +1,9 @@
+{
+  "entity.copper_golem.hurt":{
+    "sounds": [
+      {
+        "name":"votemobs:entity/golem_hurt"
+      }
+    ]
+  }
+}
