@@ -12,13 +12,11 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
@@ -33,6 +31,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.LogManager;
@@ -234,7 +233,23 @@ public class Allay extends Animal implements FlyingAnimal {
 
     }
 
-    class AllayRandomFlyingGoal extends WaterAvoidingRandomFlyingGoal{
+    public boolean isOnFire(){
+        return false;
+    }
+
+    public boolean hurt(DamageSource damage, float amount){
+        if(damage.isFire()){
+            return false;
+        }else return super.hurt(damage, amount);
+    }
+
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_) {
+        p_34300_ = super.finalizeSpawn(p_34297_, p_34298_, p_34299_, p_34300_, p_34301_);
+        this.setHomePoint(this.getOnPos());
+        return  p_34300_;
+    }
+
+        class AllayRandomFlyingGoal extends WaterAvoidingRandomFlyingGoal{
         private static final Logger LOGGER = LogManager.getLogger();
 
         private final Allay allay;
