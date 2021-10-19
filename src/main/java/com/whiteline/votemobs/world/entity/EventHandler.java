@@ -1,12 +1,10 @@
 package com.whiteline.votemobs.world.entity;
 
+import com.whiteline.votemobs.init.ItemRegistry;
 import com.whiteline.votemobs.init.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SpawnEggItem;
@@ -15,6 +13,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,8 +22,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.NoteBlockEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
@@ -59,13 +61,9 @@ public class EventHandler {
         ResourceKey<Biome> resourceKey = ResourceKey.create(ForgeRegistries.Keys.BIOMES, e.getName());
         Set<BiomeDictionary.Type> biomes = BiomeDictionary.getTypes(resourceKey);
         if(resourceKey == Biomes.SOUL_SAND_VALLEY){
-            LOGGER.warn("added");
-            e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.ALLAY.get(), 10, 1, 1));
+            e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.ALLAY.get(), 80, 1, 1));
         }
-        if(resourceKey == Biomes.LUSH_CAVES){
-            LOGGER.warn("added");
-            e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.ALLAY.get(), 8, 1, 1));
-        }
+        e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.GLARE.get(), 40, 1, 1));
     }
 
     @SubscribeEvent
@@ -83,5 +81,18 @@ public class EventHandler {
                 level.addFreshEntity(golem);
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void registerSpawns(RegistryEvent.Register<EntityType<?>> event){
+        LOGGER.info("spawns");
+        SpawnPlacements.register(Registry.ALLAY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING, Allay::checkAllaySpawnRules);
+    }
+
+    @SubscribeEvent
+    public static void registerEggs(RegistryEvent.Register<Item> event){
+        LOGGER.info("Eggs");
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ItemRegistry.ITEMS.register(modEventBus);
     }
 }

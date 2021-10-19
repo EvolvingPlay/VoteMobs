@@ -19,4 +19,7 @@ public class ItemRegistry {
     //public static final RegistryObject<SpawnEggItem> GLARE_SPAWN_EGG = ItemRegistry.ITEMS.register("glare_spawn_egg", () -> new SpawnEggItem(Registry.GLARE.get(), 0x00b300, 0xffa500, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     //public static final RegistryObject<SpawnEggItem> ALLAY_SPAWN = ItemRegistry.ITEMS.register("allay_spawn_egg", () -> new SpawnEggItem(Registry.ALLAY.get(), 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static void register(){
+        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    }
 }

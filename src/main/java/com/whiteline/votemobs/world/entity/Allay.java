@@ -31,7 +31,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.SpawnData;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.LogManager;
@@ -40,6 +43,7 @@ import org.apache.logging.log4j.Logger;
 import javax.annotation.Nullable;
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 public class Allay extends Animal implements FlyingAnimal {
@@ -71,7 +75,11 @@ public class Allay extends Animal implements FlyingAnimal {
         return new Vec3(this.entityData.get(HOME_POINT).getX(),this.entityData.get(HOME_POINT).getY(),this.entityData.get(HOME_POINT).getZ());
     }
 
-    protected SoundEvent getAmbientSound() {
+    public static boolean checkAllaySpawnRules(EntityType<Allay> p_27578_, LevelAccessor p_27579_, MobSpawnType p_27580_, BlockPos p_27581_, Random p_27582_) {
+        return true;
+    }
+
+        protected SoundEvent getAmbientSound() {
         this.playSound(SoundEvents.GLOW_SQUID_AMBIENT, 2f, 2f);
         return null;
     }
