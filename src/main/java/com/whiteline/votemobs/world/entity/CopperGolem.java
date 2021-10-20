@@ -191,7 +191,7 @@ public class CopperGolem extends AbstractGolem {
 
     public InteractionResult mobInteract(Player player, InteractionHand hand){
         ItemStack stack = player.getItemInHand(hand);
-        if(this.getOxidize() > 0 && stack.getItem().getClass().isAssignableFrom(AxeItem.class)){
+        if(this.getOxidize() > 0 && stack.getItem().getClass().isAssignableFrom(AxeItem.class) && stack.getItem().getDefaultInstance().isCorrectToolForDrops(Blocks.OAK_FENCE.defaultBlockState())){
             stack.setDamageValue(stack.getDamageValue()+1);
             this.removeOxide();
             return InteractionResult.sidedSuccess(this.level.isClientSide);

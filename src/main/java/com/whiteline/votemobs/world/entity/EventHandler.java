@@ -63,7 +63,9 @@ public class EventHandler {
         if(resourceKey == Biomes.SOUL_SAND_VALLEY){
             e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.ALLAY.get(), 80, 1, 1));
         }
-        e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.GLARE.get(), 40, 1, 1));
+        if(resourceKey != Biomes.NETHER_WASTES && resourceKey != Biomes.SOUL_SAND_VALLEY && resourceKey != Biomes.BASALT_DELTAS && resourceKey != Biomes.CRIMSON_FOREST && resourceKey != Biomes.WARPED_FOREST) {
+            e.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(Registry.GLARE.get(), 40, 1, 1));
+        }
     }
 
     @SubscribeEvent
