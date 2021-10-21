@@ -56,26 +56,29 @@ public class CopperGolemModel<T extends CopperGolem> extends EntityModel<T> {
 
     @Override
     public void setupAnim(T p_102962_, float p_102963_, float p_102964_, float p_102965_, float p_102966_, float p_102967_) {
+        if (p_102962_.getOxidize() < 3) {
             this.head.yRot = p_102966_ * ((float) Math.PI / 180F);
             this.head.xRot = p_102967_ * ((float) Math.PI / 180F);
-            if(p_102962_.getOxidize() < 3) {
+            if (p_102962_.getOxidize() < 3) {
                 this.head.yRot = p_102962_.getHeadRotate() * (float) Math.PI * 2;
             }
             this.leg_R.xRot = -1.5F * Mth.triangleWave(p_102963_, 13.0F) * p_102964_;
             this.leg_L.xRot = 1.5F * Mth.triangleWave(p_102963_, 13.0F) * p_102964_;
             this.leg_R.yRot = 0.0F;
             this.leg_L.yRot = 0.0F;
+        }
     }
 
     public void prepareMobModel(T p_102957_, float p_102958_, float p_102959_, float p_102960_) {
-        int i = p_102957_.getAttackAnimationTick();
-        LOGGER.info(i);
-        if(i > 0){
-            this.arm_R.xRot = -2.0F + 1.5F * Mth.triangleWave((float)i - p_102960_, 10.0F);
-            this.arm_L.xRot = -2.0F + 1.5F * Mth.triangleWave((float)i - p_102960_, 10.0F);
-        }else {
-            this.arm_R.xRot = (-0.2F + 1.5F * Mth.triangleWave(p_102958_, 13.0F)) * p_102959_;
-            this.arm_L.xRot = (-0.2F - 1.5F * Mth.triangleWave(p_102958_, 13.0F)) * p_102959_;
+        if (p_102957_.getOxidize() < 3) {
+            int i = p_102957_.getAttackAnimationTick();
+            if (i > 0) {
+                this.arm_R.xRot = -2.0F + 1.5F * Mth.triangleWave((float) i - p_102960_, 10.0F);
+                this.arm_L.xRot = -2.0F + 1.5F * Mth.triangleWave((float) i - p_102960_, 10.0F);
+            } else {
+                this.arm_R.xRot = (-0.2F + 1.5F * Mth.triangleWave(p_102958_, 13.0F)) * p_102959_;
+                this.arm_L.xRot = (-0.2F - 1.5F * Mth.triangleWave(p_102958_, 13.0F)) * p_102959_;
+            }
         }
     }
 

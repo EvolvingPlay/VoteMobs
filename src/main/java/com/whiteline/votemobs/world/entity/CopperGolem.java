@@ -61,8 +61,24 @@ public class CopperGolem extends AbstractGolem {
 
     protected  void registerGoals(){
         this.goalSelector.addGoal(0, new GoToButton(this, 1.25D));
-        this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(1, new RandomLookAroundGoal(this){
+            @Override
+            public boolean canUse() {
+                if (CopperGolem.this.getOxidize() == 3){
+                    return false;
+                }
+                return super.canUse();
+            }
+        });
+        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F){
+            @Override
+            public boolean canUse() {
+                if (CopperGolem.this.getOxidize() == 3){
+                    return false;
+                }
+                return super.canUse();
+            }
+        });
         this.goalSelector.addGoal(3, new PressNearbyButtons(this));
     }
 
@@ -152,7 +168,7 @@ public class CopperGolem extends AbstractGolem {
             if(this.entityData.get(OXIDIZE_TIMER) == 0){
                 this.entityData.set(OXIDIZE, this.entityData.get(OXIDIZE) + 1);
                 this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.3f - this.getOxidize()/10);
-                this.entityData.set(OXIDIZE_TIMER, 2000);
+                this.entityData.set(OXIDIZE_TIMER, 24000);
             }else this.entityData.set(OXIDIZE_TIMER, this.entityData.get(OXIDIZE_TIMER) - 1);
         }
         if(this.getHeadRotate() > 0){
@@ -198,10 +214,6 @@ public class CopperGolem extends AbstractGolem {
         }else return super.mobInteract(player, hand);
     }
 
-    public boolean isNoAi() {
-        return !(this.getOxidize() < 3);
-    }
-
     class GoToButton extends WaterAvoidingRandomStrollGoal{
         private CopperGolem golem;
         List<BlockPos> list = new ArrayList<BlockPos>();
@@ -209,6 +221,13 @@ public class CopperGolem extends AbstractGolem {
         public GoToButton(CopperGolem golem, double p){
             super(golem, p);
             this.golem = golem;
+        }
+
+        public boolean canUse(){
+            if(golem.getOxidize() == 3){
+                return false;
+            }
+            else return super.canUse();
         }
 
         @Nullable
@@ -248,6 +267,9 @@ public class CopperGolem extends AbstractGolem {
         }
 
         public boolean canUse(){
+            if (golem.getOxidize() == 3){
+                return false;
+            }
             for (int i = -1; i <= 1; i++){
                 for (int j = -1; j <= 1; j++){
                     for (int k = -2; k <= 2; k++){
