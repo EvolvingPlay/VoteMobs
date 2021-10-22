@@ -257,7 +257,7 @@ public class Allay extends Animal implements FlyingAnimal {
         return  p_34300_;
     }
 
-        class AllayRandomFlyingGoal extends WaterAvoidingRandomFlyingGoal{
+    class AllayRandomFlyingGoal extends WaterAvoidingRandomFlyingGoal{
         private static final Logger LOGGER = LogManager.getLogger();
 
         private final Allay allay;
