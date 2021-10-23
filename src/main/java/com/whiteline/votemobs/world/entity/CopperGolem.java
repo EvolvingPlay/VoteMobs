@@ -213,7 +213,7 @@ public class CopperGolem extends AbstractGolem {
     }
 
     class GoToButton extends WaterAvoidingRandomStrollGoal{
-        private CopperGolem golem;
+        private final CopperGolem golem;
         List<BlockPos> list = new ArrayList<BlockPos>();
 
         public GoToButton(CopperGolem golem, double p){
@@ -251,9 +251,9 @@ public class CopperGolem extends AbstractGolem {
     }
 
     class PressNearbyButtons extends Goal{
-        private ServerLevel level;
-        private CopperGolem golem;
-        private FakePlayer player;
+        private final ServerLevel level;
+        private final CopperGolem golem;
+        private final FakePlayer player;
         GameProfile CopperGolem = new GameProfile(UUID.randomUUID(), "Test");
 
         List<BlockPos> list = new ArrayList<BlockPos>();

@@ -2,5 +2,7 @@
   "block.votemobs.copper_button": "Copper Button",
   "entity.votemobs.glare": "Glare",
   "entity.votemobs.allay": "Allay",
-  "entity.votemobs.copper_golem": "Copper Golem"
+  "entity.votemobs.copper_golem": "Copper Golem",
+  "item.votemobs.glare_spawn_egg": "Glare Spawn Egg",
+  "item.votemobs.allay_spawn_egg": "Allay Spawn Egg"
 }

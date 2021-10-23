@@ -1,11 +1,7 @@
 package com.whiteline.votemobs.world.entity;
 
-import com.mojang.datafixers.TypeRewriteRule;
-import com.whiteline.votemobs.init.Registry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.NbtUtils;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -25,7 +21,6 @@ import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.FlyingAnimal;
-import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -33,8 +28,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.SpawnData;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.LogManager;
@@ -44,7 +37,6 @@ import javax.annotation.Nullable;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 public class Allay extends Animal implements FlyingAnimal {
     private static final EntityDataAccessor<BlockPos> HOME_POINT = SynchedEntityData.defineId(Allay.class, EntityDataSerializers.BLOCK_POS);
@@ -315,14 +307,14 @@ public class Allay extends Animal implements FlyingAnimal {
             List<ItemEntity> list = Allay.this.level.getEntitiesOfClass(ItemEntity.class, Allay.this.getBoundingBox().inflate(16.0D, 16.0D, 16.0D), (item) -> item.getItem().getItem() == Allay.this.getItemBySlot(EquipmentSlot.OFFHAND).getItem());
             ItemStack itemstack = Allay.this.getItemBySlot(EquipmentSlot.MAINHAND);
             if(itemstack.getCount() < itemstack.getMaxStackSize() && !list.isEmpty()){
-                Allay.this.getNavigation().moveTo(list.get(0), (double)1.2F);
+                Allay.this.getNavigation().moveTo(list.get(0), 1.2F);
             }
         }
 
         public void start(){
             List<ItemEntity> list = Allay.this.level.getEntitiesOfClass(ItemEntity.class, Allay.this.getBoundingBox().inflate(16.0D, 16.0D, 16.0D), (item) -> item.getItem().getItem() == Allay.this.getItemBySlot(EquipmentSlot.OFFHAND).getItem());
             if(!list.isEmpty()){
-                Allay.this.getNavigation().moveTo(list.get(0), (double)1.2F);
+                Allay.this.getNavigation().moveTo(list.get(0), 1.2F);
             }
         }
     }

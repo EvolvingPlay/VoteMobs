@@ -1,0 +1,8 @@
+{
+  "block.votemobs.copper_button": "Медная кнопка",
+  "entity.votemobs.glare": "Глейр",
+  "entity.votemobs.allay": "Аллай",
+  "entity.votemobs.copper_golem": "Медный голем",
+  "item.votemobs.glare_spawn_egg": "Яйцо призыва глейра",
+  "item.votemobs.allay_spawn_egg": "Яйцо призыва аллая"
+}
