@@ -1,5 +1,8 @@
 {
   "block.votemobs.copper_button": "Медная кнопка",
+  "block.votemobs.exposed_button": "Потемневшая медная кнопка",
+  "block.votemobs.weathered_button": "Состаренная медная кнопка",
+  "block.votemobs.oxidized_button": "Окислевшаяся медная кнопка",
   "entity.votemobs.glare": "Глейр",
   "entity.votemobs.allay": "Аллай",
   "entity.votemobs.copper_golem": "Медный голем",

@@ -1,5 +1,8 @@
 {
   "block.votemobs.copper_button": "Copper Button",
+  "block.votemobs.exposed_button": "Exposed Copper Button",
+  "block.votemobs.weathered_button": "Weathered Copper Button",
+  "block.votemobs.oxidized_button": "Oxidized Copper Button",
   "entity.votemobs.glare": "Glare",
   "entity.votemobs.allay": "Allay",
   "entity.votemobs.copper_golem": "Copper Golem",
