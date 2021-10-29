@@ -5,6 +5,7 @@ import com.whiteline.votemobs.world.entity.Allay;
 import com.whiteline.votemobs.world.entity.CopperGolem;
 import com.whiteline.votemobs.world.entity.Glare;
 import com.whiteline.votemobs.world.level.block.CopperButton;
+import com.whiteline.votemobs.world.level.block.WaxedButton;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
@@ -47,6 +48,11 @@ public final class Registry {
     public static final RegistryObject<Block> EXPOSED_BUTTON = Registry.BLOCKS.register("exposed_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.EXPOSED));
     public static final RegistryObject<Block> OXIDIZED_BUTTON = Registry.BLOCKS.register("oxidized_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.OXIDIZED));
     public static final RegistryObject<Block> WEATHERED_BUTTON = Registry.BLOCKS.register("weathered_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.WEATHERED));
+
+    public static final RegistryObject<Block> WAXED_COPPER_BUTTON = Registry.BLOCKS.register("waxed_copper_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_EXPOSED_BUTTON = Registry.BLOCKS.register("waxed_exposed_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_OXIDIZED_BUTTON = Registry.BLOCKS.register("waxed_oxidized_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_WEATHERED_BUTTON = Registry.BLOCKS.register("waxed_weathered_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
 
     public static final RegistryObject<SoundEvent> GLARE_AMBIENT = Registry.SOUNDS.register("entity.glare.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.ambient")));
     public static final RegistryObject<SoundEvent> GLARE_HURT = Registry.SOUNDS.register("entity.glare.hurt", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.hurt")));
