@@ -64,7 +64,7 @@ public class Glare extends Animal implements FlyingAnimal {
     }
 
     public static boolean checkGlareSpawnRules(EntityType<Glare> p_27578_, LevelAccessor p_27579_, MobSpawnType p_27580_, BlockPos p_27581_, Random p_27582_) {
-        return p_27581_.getY() < 64;
+        return p_27581_.getY() < 40;
     }
 
     public void aiStep(){
