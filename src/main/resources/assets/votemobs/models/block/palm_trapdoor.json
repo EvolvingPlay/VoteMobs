@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/trapdoor",
+  "textures": {
+    "texture": "votemobs:block/palm_trapdoor"
+  }
+}

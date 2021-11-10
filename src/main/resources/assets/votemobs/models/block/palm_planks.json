@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/planks",
+  "textures": {
+    "texture": "votemobs:block/palm_planks"
+  }
+}
