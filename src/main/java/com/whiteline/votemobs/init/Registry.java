@@ -55,6 +55,8 @@ public final class Registry {
     public static final RegistryObject<EntityType<Firefly>> FIREFLY = Registry.ENTITIES.register("firefly", () -> EntityType.Builder.of(Firefly::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"firefly"));
     public static final RegistryObject<EntityType<EternalHunger>> ETERNALHUNGER = Registry.ENTITIES.register("eternal_hunger", () -> EntityType.Builder.of(EternalHunger::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"eternal_hunger"));
     public static final RegistryObject<EntityType<DeepSeaMonster>> DEEPSEAMONSTER = Registry.ENTITIES.register("deep_sea_monster", () -> EntityType.Builder.of(DeepSeaMonster::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"deep_sea_monster"));
+    public static final RegistryObject<EntityType<DeepSeaMonster>> FROG = Registry.ENTITIES.register("frog", () -> EntityType.Builder.of(DeepSeaMonster::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"frog"));
+    public static final RegistryObject<EntityType<DeepSeaMonster>> TADPOLE = Registry.ENTITIES.register("tadpole", () -> EntityType.Builder.of(DeepSeaMonster::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"tadpole"));
 
     public static final RegistryObject<Block> COPPER_BUTTON = Registry.BLOCKS.register("copper_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.UNAFFECTED));
     public static final RegistryObject<Block> EXPOSED_BUTTON = Registry.BLOCKS.register("exposed_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.EXPOSED));
@@ -93,7 +95,6 @@ public final class Registry {
     public static final RegistryObject<Block> PALM_SING = Registry.BLOCKS.register("palm_sing", () -> new StandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), WoodType.OAK));
     public static final RegistryObject<Block> BAOBAB_TRAPDOOR = Registry.BLOCKS.register("baobab_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistryObject<Block> PALM_TRAPDOOR = Registry.BLOCKS.register("palm_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistryObject<Block> BAOBAB_WALL_SING = Registry.BLOCKS.register("baobab_wall_sing", () -> new WallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD).dropsLike(BAOBAB_SING)));
 
 
     public static void register(){

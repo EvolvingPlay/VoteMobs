@@ -24,6 +24,8 @@ public class VoteMobsModelLayers {
     public static ModelLayerLocation FIREFLY = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"firefly"), "firefly");
     public static ModelLayerLocation ETERNALHUNGER = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"eternal_hunger"), "eternal_hunger");
     public static ModelLayerLocation DEEPSEAMONSTER = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"deep_sea_monster"), "deep_sea_monster");
+    public static ModelLayerLocation FROG = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"frog"), "frog");
+    public static ModelLayerLocation TADPOLE = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"tadpole"), "tadpole");
 
 
     @SubscribeEvent
@@ -41,6 +43,8 @@ public class VoteMobsModelLayers {
         event.registerLayerDefinition(VoteMobsModelLayers.FIREFLY, VultureModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.ETERNALHUNGER, VultureModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, VultureModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.FROG, VultureModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, VultureModel::createBodyLayer);
 
     }
 
@@ -59,6 +63,8 @@ public class VoteMobsModelLayers {
         event.registerEntityRenderer(Registry.FIREFLY.get(), FireflyRenderer::new);
         event.registerEntityRenderer(Registry.ETERNALHUNGER.get(), EternalHungerRenderer::new);
         event.registerEntityRenderer(Registry.DEEPSEAMONSTER.get(), DeepSeaMonsterRenderer::new);
+        event.registerEntityRenderer(Registry.FROG.get(), DeepSeaMonsterRenderer::new);
+        event.registerEntityRenderer(Registry.TADPOLE.get(), DeepSeaMonsterRenderer::new);
 
     }
 }

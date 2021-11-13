@@ -33,9 +33,10 @@ public class ItemRegistry {
     public static final RegistryObject<ForgeSpawnEggItem> OSTRICH_SPAWN_EGG = ItemRegistry.ITEMS.register("ostrich_spawn_egg", () -> new ForgeSpawnEggItem(Registry.OSTRICH, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TRMITE_SPAWN_EGG = ItemRegistry.ITEMS.register("termite_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TERMITE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TUMBLEWEES_SPAWN_EGG = ItemRegistry.ITEMS.register("tumbleweed_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TUMBLEWEED, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<ForgeSpawnEggItem> VULTURE_SPAWN = ItemRegistry.ITEMS.register("vulture_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-
-    public static final RegistryObject<ForgeSpawnEggItem> BAOBAB_BOAT = ItemRegistry.ITEMS.register("baobab_boat", () -> new BoatItem(Registry.BAOBABBOAT.get()));
+    public static final RegistryObject<ForgeSpawnEggItem> VULTURE_SPAWN_EGG = ItemRegistry.ITEMS.register("vulture_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> TOAD_SPAWN_EGG = ItemRegistry.ITEMS.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
