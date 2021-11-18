@@ -29,9 +29,9 @@ displayName="Vote Mobs" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Whiteline mod team: EvolvingPlay, Zozozorb" #optional
+credits="Whiteline mod team: EvolvingPlay, Zozozorb, TRIM" #optional
 # A text field displayed in the mod UI
-authors="EvolvingPlay, Zozozorb" #optional
+authors="EvolvingPlay, Zozozorb, TRIM" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 This is a long form description of the mod. You can write whatever you want here

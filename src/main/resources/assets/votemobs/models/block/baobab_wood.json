@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "votemobs:block/baobab_log",
+    "side": "votemobs:block/baobab_log"
+  }
+}

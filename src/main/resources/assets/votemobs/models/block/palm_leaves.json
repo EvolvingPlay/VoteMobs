@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "texture": "votemobs:block/palm_leaves"
+  }
+}
