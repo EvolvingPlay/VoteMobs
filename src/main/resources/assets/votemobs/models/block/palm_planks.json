@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/planks",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "texture": "votemobs:block/palm_planks"
+    "all": "votemobs:block/palm_planks"
   }
 }

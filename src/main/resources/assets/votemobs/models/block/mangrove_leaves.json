@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "texture": "votemobs:block/mangrove_leaves"
+    "all": "votemobs:block/mangrove_leaves"
   }
 }
