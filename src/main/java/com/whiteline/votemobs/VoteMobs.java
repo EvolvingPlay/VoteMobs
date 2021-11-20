@@ -2,6 +2,7 @@ package com.whiteline.votemobs;
 
 import com.whiteline.votemobs.init.Registry;
 import com.whiteline.votemobs.world.entity.*;
+import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -66,7 +67,7 @@ public class VoteMobs
         event.put(Registry.TUMBLEWEED.get(), CopperGolem.createAttributes().build());
         event.put(Registry.TERMITE.get(), CopperGolem.createAttributes().build());
         event.put(Registry.OSTRICH.get(), Ostrich.createAttributes().build());
-        event.put(Registry.MEERKAT.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.MEERKAT.get(), Meerkat.createAttributes().build());
         event.put(Registry.INFERNO.get(), CopperGolem.createAttributes().build());
         event.put(Registry.FIREFLY.get(), Firefly.createAttributes().build());
         event.put(Registry.ETERNALHUNGER.get(), CopperGolem.createAttributes().build());
@@ -75,7 +76,9 @@ public class VoteMobs
         event.put(Registry.TADPOLE.get(), CopperGolem.createAttributes().build());
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event){}
+    private void doClientStuff(final FMLClientSetupEvent event){
+
+    }
 
     private void doBlockStuff(final NoteBlockEvent event){}
     // You can use SubscribeEvent and let the Event Bus discover methods to call
