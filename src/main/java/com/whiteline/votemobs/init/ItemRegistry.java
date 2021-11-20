@@ -1,6 +1,7 @@
 package com.whiteline.votemobs.init;
 
 import com.whiteline.votemobs.VoteMobs;
+import com.whiteline.votemobs.world.items.OstrichEgg;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -90,6 +91,8 @@ public class ItemRegistry {
     public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.FROG, 0xbe7654, 0xb7976f, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TADPOLE, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    //item_registry
+    public static final RegistryObject<Item> OSTRICH_EGG = ItemRegistry.ITEMS.register("ostrich_egg", () -> new OstrichEgg(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -74,6 +74,7 @@ public class VoteMobs
         event.put(Registry.DEEPSEAMONSTER.get(), CopperGolem.createAttributes().build());
         event.put(Registry.FROG.get(), CopperGolem.createAttributes().build());
         event.put(Registry.TADPOLE.get(), CopperGolem.createAttributes().build());
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event){

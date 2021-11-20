@@ -7,10 +7,14 @@ import com.whiteline.votemobs.world.level.block.WaxedButton;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.ThrowableProjectile;
+import net.minecraft.world.entity.projectile.ThrownEgg;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -42,6 +46,7 @@ public final class Registry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VoteMobs.MOD_ID);
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, VoteMobs.MOD_ID);
 
+    //entity
     public static final RegistryObject<EntityType<Glare>> GLARE = Registry.ENTITIES.register("glare", () -> EntityType.Builder.of(Glare::new, MobCategory.CREATURE).sized(0.9f, 0.9f).build(VoteMobs.MOD_ID+"glare"));
     public static final RegistryObject<EntityType<Allay>> ALLAY = Registry.ENTITIES.register("allay", () -> EntityType.Builder.of(Allay::new, MobCategory.CREATURE).sized(0.5f, 0.6f).build(VoteMobs.MOD_ID+"allay"));
     public static final RegistryObject<EntityType<CopperGolem>> COPPER_GOLEM = Registry.ENTITIES.register("copper_golem", () -> EntityType.Builder.of(CopperGolem::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"copper_golem"));
@@ -58,6 +63,7 @@ public final class Registry {
     public static final RegistryObject<EntityType<Frog>> FROG = Registry.ENTITIES.register("frog", () -> EntityType.Builder.of(Frog::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"frog"));
     public static final RegistryObject<EntityType<Tadpole>> TADPOLE = Registry.ENTITIES.register("tadpole", () -> EntityType.Builder.of(Tadpole::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"tadpole"));
 
+    //copper buttons
     public static final RegistryObject<Block> COPPER_BUTTON = Registry.BLOCKS.register("copper_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.UNAFFECTED));
     public static final RegistryObject<Block> EXPOSED_BUTTON = Registry.BLOCKS.register("exposed_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.EXPOSED));
     public static final RegistryObject<Block> OXIDIZED_BUTTON = Registry.BLOCKS.register("oxidized_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.OXIDIZED));
@@ -74,12 +80,12 @@ public final class Registry {
             return null;
         }
     });
-
     public static final RegistryObject<Block> WAXED_COPPER_BUTTON = Registry.BLOCKS.register("waxed_copper_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
     public static final RegistryObject<Block> WAXED_EXPOSED_BUTTON = Registry.BLOCKS.register("waxed_exposed_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
     public static final RegistryObject<Block> WAXED_OXIDIZED_BUTTON = Registry.BLOCKS.register("waxed_oxidized_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
     public static final RegistryObject<Block> WAXED_WEATHERED_BUTTON = Registry.BLOCKS.register("waxed_weathered_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
 
+    //idk
     public static final RegistryObject<SoundEvent> GLARE_AMBIENT = Registry.SOUNDS.register("entity.glare.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.ambient")));
     public static final RegistryObject<SoundEvent> GLARE_HURT = Registry.SOUNDS.register("entity.glare.hurt", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.hurt")));
     public static final RegistryObject<SoundEvent> ALLAY_AMBIENT = Registry.SOUNDS.register("entity.allay.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.allay.ambient")));
@@ -142,8 +148,12 @@ public final class Registry {
     public static final RegistryObject<Block> PALM_LEAVES = Registry.BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> PALM_DOOR = Registry.BLOCKS.register("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
 
-    //under
-    ;public static void register(){
+    //other
+    //public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffect()))
+    //public static final RegistryObject<EntityType<ThrownOstrichEgg>> TWROWNOSTRICHEGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
+
+            //under
+            ;public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         SOUNDS.register(modEventBus);
         BLOCKS.register(modEventBus);

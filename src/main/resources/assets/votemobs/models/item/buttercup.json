@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "votemobs:items/baobab_door"
+    "layer0": "votemobs:block/buttercup"
   }
 }
