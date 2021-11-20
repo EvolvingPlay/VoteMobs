@@ -2,6 +2,8 @@ package com.whiteline.votemobs.client;
 
 import com.whiteline.votemobs.VoteMobs;
 import com.whiteline.votemobs.init.Registry;
+import com.whiteline.votemobs.world.entity.Frog;
+import com.whiteline.votemobs.world.entity.Tadpole;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -63,8 +65,8 @@ public class VoteMobsModelLayers {
         event.registerEntityRenderer(Registry.FIREFLY.get(), FireflyRenderer::new);
         event.registerEntityRenderer(Registry.ETERNALHUNGER.get(), EternalHungerRenderer::new);
         event.registerEntityRenderer(Registry.DEEPSEAMONSTER.get(), DeepSeaMonsterRenderer::new);
-        event.registerEntityRenderer(Registry.FROG.get(), DeepSeaMonsterRenderer::new);
-        event.registerEntityRenderer(Registry.TADPOLE.get(), DeepSeaMonsterRenderer::new);
+        event.registerEntityRenderer(Registry.FROG.get(), FrogRenderer::new);
+        event.registerEntityRenderer(Registry.TADPOLE.get(), TadpoleRenderer::new);
 
     }
 }
