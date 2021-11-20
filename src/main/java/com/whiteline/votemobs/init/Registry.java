@@ -124,6 +124,7 @@ public final class Registry {
     }).strength(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> BAOBAB_LEAVES = Registry.BLOCKS.register("baobab_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> BAOBAB_DOOR = Registry.BLOCKS.register("baobab_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_SAPLING = Registry.BLOCKS.register("baobab_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     //palm
     public static final RegistryObject<Block> PALM_FENCE = Registry.BLOCKS.register("palm_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
