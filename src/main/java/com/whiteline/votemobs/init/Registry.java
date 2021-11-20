@@ -114,7 +114,25 @@ public final class Registry {
     public static final RegistryObject<Block> BAOBAB_STAIRS = Registry.BLOCKS.register("baobab_stairs", () -> new StairBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_STAIRS = Registry.BLOCKS.register("palm_stairs", () -> new StairBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
-    public static void register(){
+    public static final RegistryObject<Block> MANGROVE_DOOR = Registry.BLOCKS.register("mangrove_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_SAPLING = Registry.BLOCKS.register("mangrove_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> MANGROVE_TRAPDOOR = Registry.BLOCKS.register("mangrove_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> MANGROVE_WOOD = Registry.BLOCKS.register("mangrove_wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_SLAB = Registry.BLOCKS.register("mangrove_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_STAIRS = Registry.BLOCKS.register("mangrove_stairs", () -> new StairBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_BUTTON = Registry.BLOCKS.register("mangrove_button", () -> new ButtonBlock(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.WOOD)) {
+        @Override
+        protected SoundEvent getSound(boolean p_51102_) {
+            return null;
+        }
+    })
+    public static final RegistryObject<Block> MANGROVE_LEAVES = Registry.BLOCKS.register("mangrove_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> MANGROVE_LOG = Registry.BLOCKS.register("mangrove_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
+        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
+    }).strength(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_PLANKS = Registry.BLOCKS.register("mangrove_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
+    ;public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         SOUNDS.register(modEventBus);
         BLOCKS.register(modEventBus);
