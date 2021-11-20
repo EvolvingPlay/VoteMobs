@@ -35,16 +35,16 @@ public class VoteMobsModelLayers {
         event.registerLayerDefinition(VoteMobsModelLayers.COPPER_GOLEM, CopperGolemModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.MOOBLOOM, MoobloomModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.VULTURE, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.TUMBLEWEED, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.TERMITE, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.OSTRICH, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.MEERKAT, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.INFERNO, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.FIREFLY, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.ETERNALHUNGER, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.FROG, VultureModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, VultureModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.TUMBLEWEED, TumbleweedModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.TERMITE, TermiteModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.OSTRICH, OstrichModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.MEERKAT, MeerkatModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.INFERNO, InfernoModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.FIREFLY, FireflyModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ETERNALHUNGER, EternalHungerModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, DeepSeaMonsterModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.FROG, FrogModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, TadpoleModel::createBodyLayer);
 
     }
 

@@ -8,16 +8,11 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class TermiteRenderer extends MobRenderer<Termite, TermiteModel<Termite>> {
-    public ResourceLocation getTextureLocation(Tumbleweed tumbleweed) {
+    public ResourceLocation getTextureLocation(Termite termite) {
         return new ResourceLocation(VoteMobs.MOD_ID, "textures/entity/termite/termite.png");
     }
 
     public TermiteRenderer(EntityRendererProvider.Context context) {
         super(context, new TermiteModel<>(context.bakeLayer(VoteMobsModelLayers.TERMITE)), 0.4F);
-    }
-
-    @Override
-    public ResourceLocation getTextureLocation(Termite p_114482_) {
-        return null;
     }
 }

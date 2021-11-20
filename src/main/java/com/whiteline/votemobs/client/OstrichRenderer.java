@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class OstrichRenderer extends MobRenderer<Ostrich, OstrichModel<Ostrich>> {
-    public ResourceLocation getTextureLocation(Moobloom moobloom) {
+    public ResourceLocation getTextureLocation(Ostrich ostrich) {
         return new ResourceLocation(VoteMobs.MOD_ID, "textures/entity/ostrich/ostrich.png");
     }
 
@@ -16,8 +16,4 @@ public class OstrichRenderer extends MobRenderer<Ostrich, OstrichModel<Ostrich>>
         super(context, new OstrichModel<>(context.bakeLayer(VoteMobsModelLayers.OSTRICH)), 0.4F);
     }
 
-    @Override
-    public ResourceLocation getTextureLocation(Ostrich p_114482_) {
-        return null;
-    }
 }

@@ -1,9 +1,7 @@
 package com.whiteline.votemobs;
 
 import com.whiteline.votemobs.init.Registry;
-import com.whiteline.votemobs.world.entity.Allay;
-import com.whiteline.votemobs.world.entity.CopperGolem;
-import com.whiteline.votemobs.world.entity.Glare;
+import com.whiteline.votemobs.world.entity.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -63,6 +61,18 @@ public class VoteMobs
         event.put(Registry.GLARE.get(), Glare.createAttributes().build());
         event.put(Registry.ALLAY.get(), Allay.createAttributes().build());
         event.put(Registry.COPPER_GOLEM.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.MOOBLOOM.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.VULTURE.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.TUMBLEWEED.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.TERMITE.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.OSTRICH.get(), Ostrich.createAttributes().build());
+        event.put(Registry.MEERKAT.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.INFERNO.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.FIREFLY.get(), Firefly.createAttributes().build());
+        event.put(Registry.ETERNALHUNGER.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.DEEPSEAMONSTER.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.FROG.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.TADPOLE.get(), CopperGolem.createAttributes().build());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event){}

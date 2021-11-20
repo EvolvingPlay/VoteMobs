@@ -49,7 +49,7 @@ public final class Registry {
     public static final RegistryObject<EntityType<Vulture>> VULTURE = Registry.ENTITIES.register("vulture", () -> EntityType.Builder.of(Vulture::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"vulture"));
     public static final RegistryObject<EntityType<Tumbleweed>> TUMBLEWEED = Registry.ENTITIES.register("tumbleweed", () -> EntityType.Builder.of(Tumbleweed::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"tumbleweed"));
     public static final RegistryObject<EntityType<Termite>> TERMITE = Registry.ENTITIES.register("termite", () -> EntityType.Builder.of(Termite::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"termite"));
-    public static final RegistryObject<EntityType<Ostrich>> OSTRICH = Registry.ENTITIES.register("ostrich", () -> EntityType.Builder.of(Ostrich::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"ostrich"));
+    public static final RegistryObject<EntityType<Ostrich>> OSTRICH = Registry.ENTITIES.register("ostrich", () -> EntityType.Builder.of(Ostrich::new, MobCategory.CREATURE).sized(1, 2).build(VoteMobs.MOD_ID+"ostrich"));
     public static final RegistryObject<EntityType<Meerkat>> MEERKAT = Registry.ENTITIES.register("meerkat", () -> EntityType.Builder.of(Meerkat::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"meerkat"));
     public static final RegistryObject<EntityType<Inferno>> INFERNO = Registry.ENTITIES.register("inferno", () -> EntityType.Builder.of(Inferno::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"inferno"));
     public static final RegistryObject<EntityType<Firefly>> FIREFLY = Registry.ENTITIES.register("firefly", () -> EntityType.Builder.of(Firefly::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"firefly"));
@@ -74,8 +74,6 @@ public final class Registry {
     public static final RegistryObject<SoundEvent> ALLAY_DANCE = Registry.SOUNDS.register("entity.allay.dance", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.allay.dance")));
     public static final RegistryObject<SoundEvent> COPPER_GOLEM_AMBIENT = Registry.SOUNDS.register("entity.copper_golem.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.copper_golem.ambient")));
     public static final RegistryObject<SoundEvent> COPPER_GOLEM_HURT = Registry.SOUNDS.register("entity.copper_golem.hurt", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.copper_golem.hurt")));
-
-
 
     public static final RegistryObject<Block> BAOBAB_DOOR = Registry.BLOCKS.register("baobab_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_DOOR = Registry.BLOCKS.register("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
