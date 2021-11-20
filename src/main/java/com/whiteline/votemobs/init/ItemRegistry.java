@@ -16,6 +16,29 @@ public class ItemRegistry {
     public static final RegistryObject<BlockItem> EXPOSED_BUTTON_ITEM = ItemRegistry.ITEMS.register("exposed_button", () -> new BlockItem(Registry.EXPOSED_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> OXIDISED_BUTTON_ITEM = ItemRegistry.ITEMS.register("oxidized_button", () -> new BlockItem(Registry.OXIDIZED_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> WEATHERED_BUTTON_ITEM = ItemRegistry.ITEMS.register("weathered_button", () -> new BlockItem(Registry.WEATHERED_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> BAOBAB_BUTTON_ITEM = ItemRegistry.ITEMS.register("baobab_button", () -> new BlockItem(Registry.BAOBAB_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> PALM_BUTTON_ITEM = ItemRegistry.ITEMS.register("palm_button", () -> new BlockItem(Registry.PALM_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+
+    public static final RegistryObject<BlockItem> BAOBAB_DOOR_ITEM = ItemRegistry.ITEMS.register("baobab_door", () -> new BlockItem(Registry.BAOBAB_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> PALM_DOOR_ITEM = ItemRegistry.ITEMS.register("palm_door", () -> new BlockItem(Registry.PALM_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> BAOBAB_LEAVES_ITEM = ItemRegistry.ITEMS.register("baobab_leaves", () -> new BlockItem(Registry.BAOBAB_LEAVES.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_LEAVES_ITEM = ItemRegistry.ITEMS.register("palm_leaves", () -> new BlockItem(Registry.PALM_LEAVES.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_LOG_ITEM = ItemRegistry.ITEMS.register("baobab_log", () -> new BlockItem(Registry.PALM_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_LOG_ITEM = ItemRegistry.ITEMS.register("palm_log", () -> new BlockItem(Registry.PALM_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_PLANKS_ITEM = ItemRegistry.ITEMS.register("baobab_planks", () -> new BlockItem(Registry.BAOBAB_PLANKS.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_PLANKS_ITEM = ItemRegistry.ITEMS.register("palm_planks", () -> new BlockItem(Registry.PALM_PLANKS.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_SAPLING_ITEM = ItemRegistry.ITEMS.register("baobab_sapling", () -> new BlockItem(Registry.BAOBAB_SAPLING.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> PALM_SAPLING_ITEM = ItemRegistry.ITEMS.register("palm_sapling", () -> new BlockItem(Registry.PALM_SAPLING.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> BAOBAB_SING_ITEM = ItemRegistry.ITEMS.register("baobab_sing", () -> new BlockItem(Registry.BAOBAB_SING.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> PALM_SING_ITEM = ItemRegistry.ITEMS.register("palm_sing", () -> new BlockItem(Registry.PALM_SING.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<BlockItem> BAOBAB_TRAPDOOR_ITEM = ItemRegistry.ITEMS.register("baobab_trapdoor", () -> new BlockItem(Registry.BAOBAB_TRAPDOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> PALM_TRAPDOOR_ITEM = ItemRegistry.ITEMS.register("palm_trapdoor", () -> new BlockItem(Registry.PALM_TRAPDOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> BAOBAB_WOOD = ItemRegistry.ITEMS.register("baobab_wood", () -> new BlockItem(Registry.BAOBAB_WOOD.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_WOOD = ItemRegistry.ITEMS.register("palm_wood", () -> new BlockItem(Registry.PALM_WOOD.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_SLAB = ItemRegistry.ITEMS.register("baobab_slab", () -> new BlockItem(Registry.BAOBAB_SLAB.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_SLAB = ItemRegistry.ITEMS.register("palm_slab", () -> new BlockItem(Registry.PALM_SLAB.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_STAIRS = ItemRegistry.ITEMS.register("baobab_stairs", () -> new BlockItem(Registry.BAOBAB_STAIRS.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_STAIRS = ItemRegistry.ITEMS.register("palm_stairs", () -> new BlockItem(Registry.PALM_STAIRS.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 
     public static final RegistryObject<BlockItem> WAXED_COPPER_BUTTON_ITEM = ItemRegistry.ITEMS.register("waxed_copper_button", () -> new BlockItem(Registry.WAXED_COPPER_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> WAXED_EXPOSED_BUTTON_ITEM = ItemRegistry.ITEMS.register("waxed_exposed_button", () -> new BlockItem(Registry.WAXED_EXPOSED_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
@@ -34,9 +57,9 @@ public class ItemRegistry {
     public static final RegistryObject<ForgeSpawnEggItem> TRMITE_SPAWN_EGG = ItemRegistry.ITEMS.register("termite_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TERMITE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TUMBLEWEES_SPAWN_EGG = ItemRegistry.ITEMS.register("tumbleweed_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TUMBLEWEED, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> VULTURE_SPAWN_EGG = ItemRegistry.ITEMS.register("vulture_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<ForgeSpawnEggItem> TOAD_SPAWN_EGG = ItemRegistry.ITEMS.register("toad_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.FROG, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TADPOLE, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

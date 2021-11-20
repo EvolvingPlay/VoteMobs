@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 
 public class Tadpole extends Animal {
-    protected Tadpole(EntityType<? extends Animal> p_27557_, Level p_27558_) {
+    public Tadpole(EntityType<? extends Animal> p_27557_, Level p_27558_) {
         super(p_27557_, p_27558_);
     }
 

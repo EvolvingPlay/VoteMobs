@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 
 public class Frog extends Animal {
-    protected Frog(EntityType<? extends Animal> p_27557_, Level p_27558_) {
+    public Frog(EntityType<? extends Animal> p_27557_, Level p_27558_) {
         super(p_27557_, p_27558_);
     }
 
