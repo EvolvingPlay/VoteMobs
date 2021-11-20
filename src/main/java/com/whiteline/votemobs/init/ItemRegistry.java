@@ -2,6 +2,12 @@ package com.whiteline.votemobs.init;
 
 import com.whiteline.votemobs.VoteMobs;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.grower.DarkOakTreeGrower;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -46,12 +52,12 @@ public class ItemRegistry {
     public static final RegistryObject<BlockItem> BAOBAB_SLAB_ITEM = ItemRegistry.ITEMS.register("baobab_slab", () -> new BlockItem(Registry.BAOBAB_SLAB.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> BAOBAB_WOOD_ITEM = ItemRegistry.ITEMS.register("baobab_wood", () -> new BlockItem(Registry.BAOBAB_WOOD.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> BAOBAB_TRAPDOOR_ITEM = ItemRegistry.ITEMS.register("baobab_trapdoor", () -> new BlockItem(Registry.BAOBAB_TRAPDOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
-    public static final RegistryObject<BlockItem> BAOBAB_SAPLING_ITEM = ItemRegistry.ITEMS.register("baobab_sapling", () -> new BlockItem(Registry.BAOBAB_SAPLING.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
     public static final RegistryObject<BlockItem> BAOBAB_PLANKS_ITEM = ItemRegistry.ITEMS.register("baobab_planks", () -> new BlockItem(Registry.BAOBAB_PLANKS.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> BAOBAB_LOG_ITEM = ItemRegistry.ITEMS.register("baobab_log", () -> new BlockItem(Registry.BAOBAB_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> BAOBAB_LEAVES_ITEM = ItemRegistry.ITEMS.register("baobab_leaves", () -> new BlockItem(Registry.BAOBAB_LEAVES.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> BAOBAB_DOOR_ITEM = ItemRegistry.ITEMS.register("baobab_door", () -> new BlockItem(Registry.BAOBAB_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> BAOBAB_BUTTON_ITEM = ItemRegistry.ITEMS.register("baobab_button", () -> new BlockItem(Registry.BAOBAB_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<Block> BAOBAB_SAPLING = Registry.BLOCKS.register("baobab_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     //palm
     public static final RegistryObject<BlockItem> PALM_FENCE_ITEM = ItemRegistry.ITEMS.register("palm_fence", () -> new BlockItem(Registry.PALM_FENCE.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
@@ -67,6 +73,7 @@ public class ItemRegistry {
     public static final RegistryObject<BlockItem> PALM_LEAVES_ITEM = ItemRegistry.ITEMS.register("palm_leaves", () -> new BlockItem(Registry.PALM_LEAVES.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> PALM_DOOR_ITEM = ItemRegistry.ITEMS.register("palm_door", () -> new BlockItem(Registry.PALM_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> PALM_BUTTON_ITEM = ItemRegistry.ITEMS.register("palm_button", () -> new BlockItem(Registry.PALM_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<Block> PALM_SAPLING = Registry.BLOCKS.register("palm_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
 
     //spawn egg
     public static final RegistryObject<ForgeSpawnEggItem> ALLAY_SPAWN = ItemRegistry.ITEMS.register("allay_spawn_egg", () -> new ForgeSpawnEggItem(Registry.ALLAY, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
