@@ -87,33 +87,7 @@ public final class Registry {
     public static final RegistryObject<SoundEvent> COPPER_GOLEM_AMBIENT = Registry.SOUNDS.register("entity.copper_golem.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.copper_golem.ambient")));
     public static final RegistryObject<SoundEvent> COPPER_GOLEM_HURT = Registry.SOUNDS.register("entity.copper_golem.hurt", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.copper_golem.hurt")));
 
-    public static final RegistryObject<Block> BAOBAB_DOOR = Registry.BLOCKS.register("baobab_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_DOOR = Registry.BLOCKS.register("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> BAOBAB_LEAVES = Registry.BLOCKS.register("baobab_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> PALM_LEAVES = Registry.BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> BAOBAB_LOG = Registry.BLOCKS.register("baobab_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
-        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
-    }).strength(2.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_LOG = Registry.BLOCKS.register("palm_log", () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
-        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
-    }).strength(2.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> BAOBAB_PLANKS = Registry.BLOCKS.register("baobab_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_PLANKS = Registry.BLOCKS.register("palm_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> BAOBAB_SAPLING = Registry.BLOCKS.register("baobab_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> PALM_SAPLING = Registry.BLOCKS.register("palm_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
-    //public static final RegistryObject<Block> BAOBAB_SING = Registry.BLOCKS.register("baobab_sing", () -> new StandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), WoodType.BAOBAB));
-    //public static final RegistryObject<Block> PALM_SING = Registry.BLOCKS.register("palm_sing", () -> new StandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), WoodType.PALM));
-    public static final RegistryObject<Block> BAOBAB_TRAPDOOR = Registry.BLOCKS.register("baobab_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistryObject<Block> PALM_TRAPDOOR = Registry.BLOCKS.register("palm_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistryObject<Block> BAOBAB_WOOD = Registry.BLOCKS.register("baobab_wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_WOOD = Registry.BLOCKS.register("palm_wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    //public static final RegistryObject<Block> BAOBAB_WALL_SING = Registry.BLOCKS.register("baobab_wall_sing", () -> new WallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), WoodType.BAOBAB));
-    //public static final RegistryObject<Block> PALM_WALL_SING = Registry.BLOCKS.register("palm_wall_sing", () -> new WallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), WoodType.PALM));
-    public static final RegistryObject<Block> BAOBAB_SLAB = Registry.BLOCKS.register("baobab_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_SLAB = Registry.BLOCKS.register("palm_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> BAOBAB_STAIRS = Registry.BLOCKS.register("baobab_stairs", () -> new StairBlock(BAOBAB_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PALM_STAIRS = Registry.BLOCKS.register("palm_stairs", () -> new StairBlock(PALM_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-
+    //mangove
     public static final RegistryObject<Block> MANGROVE_DOOR = Registry.BLOCKS.register("mangrove_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> MANGROVE_SAPLING = Registry.BLOCKS.register("mangrove_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<Block> MANGROVE_TRAPDOOR = Registry.BLOCKS.register("mangrove_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
@@ -131,7 +105,43 @@ public final class Registry {
         return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
     }).strength(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> MANGROVE_PLANKS = Registry.BLOCKS.register("mangrove_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_ROOT = Registry.BLOCKS.register("mangrove_root", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_FENCE = Registry.BLOCKS.register("mangrove_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> MANGROVE_FENCE_GATE = Registry.BLOCKS.register("mangrove_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> MANGROVE_PRESSURE_PLATE = Registry.BLOCKS.register("mangrove_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
 
+    //baobab
+    public static final RegistryObject<Block> BAOBAB_FENCE = Registry.BLOCKS.register("baobab_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> BAOBAB_PLANKS = Registry.BLOCKS.register("baobab_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_FENCE_GATE = Registry.BLOCKS.register("baobab_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> BAOBAB_PRESSURE_PLATE = Registry.BLOCKS.register("baobab_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> BAOBAB_STAIRS = Registry.BLOCKS.register("baobab_stairs", () -> new StairBlock(BAOBAB_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_SLAB = Registry.BLOCKS.register("baobab_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_WOOD = Registry.BLOCKS.register("baobab_wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_TRAPDOOR = Registry.BLOCKS.register("baobab_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> BAOBAB_LOG = Registry.BLOCKS.register("baobab_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
+        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
+    }).strength(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_LEAVES = Registry.BLOCKS.register("baobab_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> BAOBAB_DOOR = Registry.BLOCKS.register("baobab_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
+
+    //palm
+    public static final RegistryObject<Block> PALM_FENCE = Registry.BLOCKS.register("palm_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> PALM_PLANKS = Registry.BLOCKS.register("palm_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_FENCE_GATE = Registry.BLOCKS.register("palm_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> PALM_PRESSURE_PLATE = Registry.BLOCKS.register("palm_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> PALM_STAIRS = Registry.BLOCKS.register("palm_stairs", () -> new StairBlock(PALM_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_SLAB = Registry.BLOCKS.register("palm_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_WOOD = Registry.BLOCKS.register("palm_wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_TRAPDOOR = Registry.BLOCKS.register("palm_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> PALM_SAPLING = Registry.BLOCKS.register("palm_sapling", () -> new SaplingBlock(new DarkOakTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> PALM_LOG = Registry.BLOCKS.register("palm_log", () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
+        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
+    }).strength(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_LEAVES = Registry.BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> PALM_DOOR = Registry.BLOCKS.register("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
+
+    //under
     ;public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         SOUNDS.register(modEventBus);
