@@ -2,6 +2,8 @@ package com.whiteline.votemobs;
 
 import com.whiteline.votemobs.init.Registry;
 import com.whiteline.votemobs.world.entity.*;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -45,6 +47,18 @@ public class VoteMobs
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        ItemBlockRenderTypes.setRenderLayer(Registry.BAOBAB_DOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.MANGROVE_DOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.PALM_DOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.BAOBAB_TRAPDOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.MANGROVE_TRAPDOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.PALM_TRAPDOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.BAOBAB_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.MANGROVE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.PALM_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.BAOBAB_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.MANGROVE_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Registry.PALM_LEAVES.get(), RenderType.cutoutMipped());
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());

@@ -4,6 +4,7 @@ import com.whiteline.votemobs.VoteMobs;
 import com.whiteline.votemobs.init.Registry;
 import com.whiteline.votemobs.world.entity.Frog;
 import com.whiteline.votemobs.world.entity.Tadpole;
+import net.minecraft.client.model.IllagerModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -49,7 +50,7 @@ public class VoteMobsModelLayers {
         event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, DeepSeaMonsterModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.FROG, FrogModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, TadpoleModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGER, IcelogerModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGER, IllagerModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.ICELOGERBLOCKS, IcelogerBlocksModel::createBodyLayer);
 
     }

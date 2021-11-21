@@ -11,6 +11,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.entity.projectile.ThrownEgg;
@@ -51,7 +52,7 @@ public final class Registry {
     public static final RegistryObject<EntityType<Allay>> ALLAY = Registry.ENTITIES.register("allay", () -> EntityType.Builder.of(Allay::new, MobCategory.CREATURE).sized(0.5f, 0.6f).build(VoteMobs.MOD_ID+"allay"));
     public static final RegistryObject<EntityType<CopperGolem>> COPPER_GOLEM = Registry.ENTITIES.register("copper_golem", () -> EntityType.Builder.of(CopperGolem::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"copper_golem"));
     public static final RegistryObject<EntityType<Moobloom>> MOOBLOOM = Registry.ENTITIES.register("moobloom", () -> EntityType.Builder.of(Moobloom::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"moobloom"));
-    public static final RegistryObject<EntityType<Vulture>> VULTURE = Registry.ENTITIES.register("vulture", () -> EntityType.Builder.of(Vulture::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"vulture"));
+    public static final RegistryObject<EntityType<Vulture>> VULTURE = Registry.ENTITIES.register("vulture", () -> EntityType.Builder.of(Vulture::new, MobCategory.CREATURE).sized(1, 1).immuneTo(Blocks.CACTUS).build(VoteMobs.MOD_ID+"vulture"));
     public static final RegistryObject<EntityType<Tumbleweed>> TUMBLEWEED = Registry.ENTITIES.register("tumbleweed", () -> EntityType.Builder.of(Tumbleweed::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"tumbleweed"));
     public static final RegistryObject<EntityType<Termite>> TERMITE = Registry.ENTITIES.register("termite", () -> EntityType.Builder.of(Termite::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"termite"));
     public static final RegistryObject<EntityType<Ostrich>> OSTRICH = Registry.ENTITIES.register("ostrich", () -> EntityType.Builder.of(Ostrich::new, MobCategory.CREATURE).sized(1, 2).build(VoteMobs.MOD_ID+"ostrich"));
@@ -172,7 +173,7 @@ public final class Registry {
 
     //other
     //public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffect()))
-    //public static final RegistryObject<EntityType<ThrownOstrichEgg>> TWROWNOSTRICHEGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
+    public static final RegistryObject<EntityType<ThrowableItemProjectile>> THROWN_OSTRICH_EGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.<ThrowableItemProjectile>of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
 
     //food
     public static final FoodProperties PRICKLY_PEAR_FRUIT = (new FoodProperties.Builder()).nutrition(2).saturationMod(8F).build();

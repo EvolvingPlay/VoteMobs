@@ -69,9 +69,9 @@ public class Tumbleweed extends Animal {
                 if (vec3 == null) {
                     return false;
                 } else {
-                    this.wantedX = vec3.x;
+                    this.wantedX = vec3.x*10;
                     this.wantedY = vec3.y;
-                    this.wantedZ = vec3.z;
+                    this.wantedZ = vec3.z*10;
                     this.forceTrigger = false;
                     return true;
                 }

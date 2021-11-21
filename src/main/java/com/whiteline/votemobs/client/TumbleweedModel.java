@@ -43,7 +43,8 @@ public class TumbleweedModel<T extends Entity> extends EntityModel<T> {
 
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+        spin.xRot = ageInTicks/4;
+        spin.y = (float) Math.sin(ageInTicks/4)*5 -1;
     }
 
     @Override
