@@ -159,8 +159,10 @@ public final class Registry {
     //public static final RegistryObject<EntityType<ThrownOstrichEgg>> TWROWNOSTRICHEGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
 
     //food
-    public static final FoodProperties PICKLY_PEAR_FRUIT = (new FoodProperties.Builder()).nutrition(2).saturationMod(8F).build();
+    public static final FoodProperties PRICKLY_PEAR_FRUIT = (new FoodProperties.Builder()).nutrition(2).saturationMod(8F).build();
     public static final FoodProperties FRIED_EGG = (new FoodProperties.Builder()).nutrition(5).saturationMod(16F).build();
+    public static final FoodProperties COCONUT_DRINK = (new FoodProperties.Builder()).nutrition(5).saturationMod(16F).build();
+    public static final FoodProperties PRICKLY_PEAR_SALAD = (new FoodProperties.Builder()).nutrition(5).saturationMod(16F).build();
 
     //under
             ;public static void register(){

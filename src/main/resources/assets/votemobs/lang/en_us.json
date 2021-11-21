@@ -65,6 +65,8 @@
   "entity.votemobs.tumbleweed": "Tumbleweed",
   "entity.votemobs.frog": "Frog",
   "entity.votemobs.tadpole": "Tadpole",
+  "entity.votemobs.iceloger": "Iceloger",
+  "entity.votemobs.icelogerblocks": "Iceloger Blocks",
 
   "item.votemobs.glare_spawn_egg": "Glare Spawn Egg",
   "item.votemobs.allay_spawn_egg": "Allay Spawn Egg",
@@ -80,12 +82,18 @@
   "item.votemobs.tumbleweed_spawn_egg": "Tumbleweed Spawn Egg",
   "item.votemobs.frog_spawn_egg": "Frog Spawn Egg",
   "item.votemobs.toad_spawn_egg": "Toad Spawn Egg",
+  "item.votemobs.iceloger_spawn_egg": "Iceloger Spawn Egg",
 
   "item.votemobs.ostrich_egg": "Ostrich Egg",
   "item.votemobs.tentacle": "Tentacle",
   "item.votemobs.firefly_glass_bottle": "Firefly Glass Bottle",
+  "item.votemobs.coconut_item": "Coconut",
 
-  "item.votemobs.prickly_pear_fruit": "Prickly Pear Fruit",
-  "item.votemobs.fried_egg": "Fried Egg"
+  "item.votemobs.prickly_pear_fruit": "Fetus",
+  "item.votemobs.fried_egg": "Fried Egg",
+  "item.votemobs.coconut_drink": "Coconut Drink",
+  "item.votemobs.prickly_pear_salad": "Fetus Salad",
 
+  "advancements.story.prickly_pear_fruit.title": "And I want and it stings",
+  "advancements.story.prickly_pear_fruit.description": "Get Fetus"
 }

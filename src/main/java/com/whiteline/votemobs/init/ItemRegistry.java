@@ -92,10 +92,13 @@ public class ItemRegistry {
     public static final RegistryObject<Item> OSTRICH_EGG = ItemRegistry.ITEMS.register("ostrich_egg", () -> new OstrichEgg(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> FIREFLY_GLASS_BOTTLE = ItemRegistry.ITEMS.register("firefly_glass_bottle", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> TENTACLE = ItemRegistry.ITEMS.register("tentacle", () -> new LeadItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> COCONUT_ITEM = ItemRegistry.ITEMS.register("coconut_item", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     //food
-    public static final RegistryObject<Item> PICKLY_PEAR_FRUIT = ItemRegistry.ITEMS.register("prickly_pear_fruit", () -> new Item(new Item.Properties().food(Registry.PICKLY_PEAR_FRUIT).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> PRICKLY_PEAR_FRUIT = ItemRegistry.ITEMS.register("prickly_pear_fruit", () -> new Item(new Item.Properties().food(Registry.PRICKLY_PEAR_FRUIT).tab(CreativeModeTab.TAB_FOOD)));
     public static final RegistryObject<Item> FRIED_EGG = ItemRegistry.ITEMS.register("fried_egg", () -> new Item(new Item.Properties().food(Registry.FRIED_EGG).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> COCONUT_DRINK = ItemRegistry.ITEMS.register("coconut_drink", () -> new Item(new Item.Properties().food(Registry.COCONUT_DRINK).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> PRICKLY_PEAR_SALAD = ItemRegistry.ITEMS.register("prickly_pear_salad", () -> new Item(new Item.Properties().food(Registry.PRICKLY_PEAR_SALAD).tab(CreativeModeTab.TAB_FOOD)));
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
