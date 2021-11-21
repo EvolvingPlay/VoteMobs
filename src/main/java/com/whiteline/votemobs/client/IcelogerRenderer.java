@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.SpellcasterIllager;
 
-public class IcelogerRenderer<I extends SpellcasterIllager> extends MobRenderer<Iceloger, IcelogerModel<Iceloger>> {
+public class IcelogerRenderer extends MobRenderer<Iceloger, IcelogerModel<Iceloger>> {
     public ResourceLocation getTextureLocation(Iceloger iceloger) {
         return new ResourceLocation(VoteMobs.MOD_ID, "textures/entity/iceloger/iceloger.png");
     }

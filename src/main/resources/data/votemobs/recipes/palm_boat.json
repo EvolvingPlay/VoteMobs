@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "votemobs:palm_planks"
+    }
+  },
+  "result": {
+    "item": "votemobs:palm_boat"
+  }
+}

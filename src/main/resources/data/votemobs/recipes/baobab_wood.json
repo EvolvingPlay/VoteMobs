@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "votemobs:baobab_log"
+    }
+  },
+  "result": {
+    "item": "votemobs:baobab_wood",
+    "count": 3
+  }
+}

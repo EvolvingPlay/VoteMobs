@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "W": {
+      "item": "votemobs:baobab_planks"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "votemobs:baobab_fence",
+    "count": 3
+  }
+}

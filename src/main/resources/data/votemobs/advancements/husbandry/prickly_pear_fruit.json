@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:husbandry/balanced_diet",
+  "display": {
+    "icon": {
+      "item": "votemobs:prickly_pear_fruit"
+    },
+    "title": {
+      "translate": "advancements.story.prickly_pear_fruit.title"
+    },
+    "description": {
+      "translate": "advancements.story.prickly_pear_fruit.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "votemobs:prickly_pear_fruit"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -2,15 +2,10 @@ package com.whiteline.votemobs.init;
 
 import com.whiteline.votemobs.VoteMobs;
 import com.whiteline.votemobs.world.items.OstrichEgg;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.grower.DarkOakTreeGrower;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -74,6 +69,7 @@ public class ItemRegistry {
     public static final RegistryObject<BlockItem> PALM_LEAVES_ITEM = ItemRegistry.ITEMS.register("palm_leaves", () -> new BlockItem(Registry.PALM_LEAVES.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> PALM_DOOR_ITEM = ItemRegistry.ITEMS.register("palm_door", () -> new BlockItem(Registry.PALM_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
     public static final RegistryObject<BlockItem> PALM_BUTTON_ITEM = ItemRegistry.ITEMS.register("palm_button", () -> new BlockItem(Registry.PALM_BUTTON.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockItem> PALM_CROWN_BLOCK_ITEM = ItemRegistry.ITEMS.register("palm_crown_log", () -> new BlockItem(Registry.PALM_CROWN_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 
     //spawn egg
     public static final RegistryObject<ForgeSpawnEggItem> ALLAY_SPAWN = ItemRegistry.ITEMS.register("allay_spawn_egg", () -> new ForgeSpawnEggItem(Registry.ALLAY, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -90,9 +86,16 @@ public class ItemRegistry {
     public static final RegistryObject<ForgeSpawnEggItem> VULTURE_SPAWN_EGG = ItemRegistry.ITEMS.register("vulture_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0xcba161, 0xd6ccab, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.FROG, 0xbe7654, 0xb7976f, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TADPOLE, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> ICELOGER_SPAWN_EGG = ItemRegistry.ITEMS.register("iceloger_spawn_egg", () -> new ForgeSpawnEggItem(Registry.ICELOGER, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     //item_registry
     public static final RegistryObject<Item> OSTRICH_EGG = ItemRegistry.ITEMS.register("ostrich_egg", () -> new OstrichEgg(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> FIREFLY_GLASS_BOTTLE = ItemRegistry.ITEMS.register("firefly_glass_bottle", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> TENTACLE = ItemRegistry.ITEMS.register("tentacle", () -> new LeadItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    //food
+    public static final RegistryObject<Item> PICKLY_PEAR_FRUIT = ItemRegistry.ITEMS.register("prickly_pear_fruit", () -> new Item(new Item.Properties().food(Registry.PICKLY_PEAR_FRUIT).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> FRIED_EGG = ItemRegistry.ITEMS.register("fried_egg", () -> new Item(new Item.Properties().food(Registry.FRIED_EGG).tab(CreativeModeTab.TAB_FOOD)));
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

@@ -15,6 +15,7 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.entity.projectile.ThrownEgg;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -149,12 +150,19 @@ public final class Registry {
     }).strength(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> PALM_LEAVES = Registry.BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> PALM_DOOR = Registry.BLOCKS.register("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.DECORATION).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_CROWN_BLOCK = Registry.BLOCKS.register("palm_crown_block", () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
+        return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
+    }).strength(2.0F).sound(SoundType.WOOD)));
 
     //other
     //public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffect()))
     //public static final RegistryObject<EntityType<ThrownOstrichEgg>> TWROWNOSTRICHEGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
 
-            //under
+    //food
+    public static final FoodProperties PICKLY_PEAR_FRUIT = (new FoodProperties.Builder()).nutrition(2).saturationMod(8F).build();
+    public static final FoodProperties FRIED_EGG = (new FoodProperties.Builder()).nutrition(5).saturationMod(16F).build();
+
+    //under
             ;public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         SOUNDS.register(modEventBus);

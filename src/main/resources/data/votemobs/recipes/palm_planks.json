@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "votemobs:baobab_log"
+    }
+  ],
+  "result": {
+    "item": "votemobs:baobab_planks"
+  }
+}

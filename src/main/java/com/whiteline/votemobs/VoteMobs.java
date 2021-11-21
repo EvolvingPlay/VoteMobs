@@ -74,6 +74,8 @@ public class VoteMobs
         event.put(Registry.DEEPSEAMONSTER.get(), CopperGolem.createAttributes().build());
         event.put(Registry.FROG.get(), CopperGolem.createAttributes().build());
         event.put(Registry.TADPOLE.get(), CopperGolem.createAttributes().build());
+        event.put(Registry.ICELOGER.get(), Iceloger.createAttributes().build());
+        event.put(Registry.ICELOGERBLOCKS.get(), IcelogerBlocks.createAttributes().build());
 
     }
 

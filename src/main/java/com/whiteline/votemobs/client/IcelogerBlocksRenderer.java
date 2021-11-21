@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class IcelogerBlocksRenderer extends MobRenderer<IcelogerBlocks, IcelogerBlocksModel<IcelogerBlocks>> {
     public ResourceLocation getTextureLocation(IcelogerBlocks icelogerblocks) {
-        return new ResourceLocation(VoteMobs.MOD_ID, "textures/entity/iceloger/icelogerblocks.png");
+        return new ResourceLocation(VoteMobs.MOD_ID, "textures/entity/iceloger/iceloger_ice.png");
     }
 
     public IcelogerBlocksRenderer(EntityRendererProvider.Context context) {

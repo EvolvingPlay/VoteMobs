@@ -35,6 +35,7 @@
   "block.votemobs.palm_fence": "Palm Fence",
   "block.votemobs.palm_fence_gate": "Palm Fence Gate",
   "block.votemobs.palm_pressure_plate": "Palm Pressure Plate",
+  "block.votemobs.palm_crown_block": "Palm Crown Block",
   "block.votemobs.baobab_door": "Baobab Door",
   "block.votemobs.baobab_leaves": "Baobab Leaves",
   "block.votemobs.baobab_log": "Baobab Log",
@@ -80,5 +81,11 @@
   "item.votemobs.frog_spawn_egg": "Frog Spawn Egg",
   "item.votemobs.toad_spawn_egg": "Toad Spawn Egg",
 
-  "item.votemobs.ostrich_egg": "Ostrich Egg"
+  "item.votemobs.ostrich_egg": "Ostrich Egg",
+  "item.votemobs.tentacle": "Tentacle",
+  "item.votemobs.firefly_glass_bottle": "Firefly Glass Bottle",
+
+  "item.votemobs.prickly_pear_fruit": "Prickly Pear Fruit",
+  "item.votemobs.fried_egg": "Fried Egg"
+
 }

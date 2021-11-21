@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "votemobs:palm_log",
+    "votemobs:palm_wood",
+    "votemobs:stripped_palm_log",
+    "votemobs:stripped_palm_wood"
+  ]
+}

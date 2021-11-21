@@ -49,8 +49,8 @@ public class VoteMobsModelLayers {
         event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, DeepSeaMonsterModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.FROG, FrogModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, TadpoleModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGER, TadpoleModel::createBodyLayer);
-        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGERBLOCKS, TadpoleModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGER, IcelogerModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGERBLOCKS, IcelogerBlocksModel::createBodyLayer);
 
     }
 
