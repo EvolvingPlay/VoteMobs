@@ -62,6 +62,8 @@ public final class Registry {
     public static final RegistryObject<EntityType<DeepSeaMonster>> DEEPSEAMONSTER = Registry.ENTITIES.register("deep_sea_monster", () -> EntityType.Builder.of(DeepSeaMonster::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"deep_sea_monster"));
     public static final RegistryObject<EntityType<Frog>> FROG = Registry.ENTITIES.register("frog", () -> EntityType.Builder.of(Frog::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"frog"));
     public static final RegistryObject<EntityType<Tadpole>> TADPOLE = Registry.ENTITIES.register("tadpole", () -> EntityType.Builder.of(Tadpole::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"tadpole"));
+    public static final RegistryObject<EntityType<Iceloger>> ICELOGER = Registry.ENTITIES.register("iceloger", () -> EntityType.Builder.of(Iceloger::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"iceloger"));
+    public static final RegistryObject<EntityType<IcelogerBlocks>> ICELOGERBLOCKS = Registry.ENTITIES.register("icelogerblocks", () -> EntityType.Builder.of(IcelogerBlocks::new, MobCategory.CREATURE).sized(1, 1).build(VoteMobs.MOD_ID+"iceloger"));
 
     //copper buttons
     public static final RegistryObject<Block> COPPER_BUTTON = Registry.BLOCKS.register("copper_button", () -> new CopperButton(true, BlockBehaviour.Properties.of(Material.DECORATION).noCollission().sound(SoundType.COPPER), WeatheringCopper.WeatherState.UNAFFECTED));

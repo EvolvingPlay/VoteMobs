@@ -28,6 +28,8 @@ public class VoteMobsModelLayers {
     public static ModelLayerLocation DEEPSEAMONSTER = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"deep_sea_monster"), "deep_sea_monster");
     public static ModelLayerLocation FROG = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"frog"), "frog");
     public static ModelLayerLocation TADPOLE = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"tadpole"), "tadpole");
+    public static ModelLayerLocation ICELOGER = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"iceloger"), "iceloger");
+    public static ModelLayerLocation ICELOGERBLOCKS = new ModelLayerLocation(new ResourceLocation(VoteMobs.MOD_ID+"icelogerblocks"), "icelogerblocks");
 
 
     @SubscribeEvent
@@ -47,6 +49,8 @@ public class VoteMobsModelLayers {
         event.registerLayerDefinition(VoteMobsModelLayers.DEEPSEAMONSTER, DeepSeaMonsterModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.FROG, FrogModel::createBodyLayer);
         event.registerLayerDefinition(VoteMobsModelLayers.TADPOLE, TadpoleModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGER, TadpoleModel::createBodyLayer);
+        event.registerLayerDefinition(VoteMobsModelLayers.ICELOGERBLOCKS, TadpoleModel::createBodyLayer);
 
     }
 
@@ -67,6 +71,8 @@ public class VoteMobsModelLayers {
         event.registerEntityRenderer(Registry.DEEPSEAMONSTER.get(), DeepSeaMonsterRenderer::new);
         event.registerEntityRenderer(Registry.FROG.get(), FrogRenderer::new);
         event.registerEntityRenderer(Registry.TADPOLE.get(), TadpoleRenderer::new);
+        event.registerEntityRenderer(Registry.ICELOGER.get(), IcelogerRenderer::new);
+        event.registerEntityRenderer(Registry.ICELOGERBLOCKS.get(), IcelogerBlocksRenderer::new);
 
     }
 }

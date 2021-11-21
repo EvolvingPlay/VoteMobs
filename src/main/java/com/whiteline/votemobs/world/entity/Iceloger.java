@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class Iceloger extends SpellcasterIllager {
 
-    protected Iceloger(EntityType<? extends SpellcasterIllager> p_33724_, Level p_33725_) {
+    public Iceloger(EntityType<? extends SpellcasterIllager> p_33724_, Level p_33725_) {
         super(p_33724_, p_33725_);
         this.xpReward = 10;
     }
