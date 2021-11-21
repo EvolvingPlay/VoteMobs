@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "votemobs:block/acacia_log_top_infested",
-    "side": "votemobs:block/acacia_log_infested"
+    "end": "minecraft:block/acacia_log_top",
+    "side": "minecraft:block/acacia_log"
   }
 }

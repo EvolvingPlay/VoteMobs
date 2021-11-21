@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "minecraft:block/acacia_log_horizontal_infested",
+      "model": "votemobs:block/acacia_log_horizontal_infested",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "minecraft:block/acacia_log_infested"
+      "model": "votemobs:block/acacia_log_infested"
     },
     "axis=z": {
-      "model": "minecraft:block/acacia_log_horizontal_infested",
+      "model": "votemobs:block/acacia_log_horizontal_infested",
       "x": 90
     }
   }
