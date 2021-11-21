@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "votemobs:block/palm_log_horizontal_infested",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "votemobs:block/palm_log_infested"
+    },
+    "axis=z": {
+      "model": "votemobs:block/palm_log_horizontal_infested",
+      "x": 90
+    }
+  }
+}

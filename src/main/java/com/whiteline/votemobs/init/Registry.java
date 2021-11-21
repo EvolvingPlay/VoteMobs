@@ -2,8 +2,7 @@ package com.whiteline.votemobs.init;
 
 import com.whiteline.votemobs.VoteMobs;
 import com.whiteline.votemobs.world.entity.*;
-import com.whiteline.votemobs.world.level.block.CopperButton;
-import com.whiteline.votemobs.world.level.block.WaxedButton;
+import com.whiteline.votemobs.world.level.block.*;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
@@ -153,6 +152,23 @@ public final class Registry {
     public static final RegistryObject<Block> PALM_CROWN_BLOCK = Registry.BLOCKS.register("palm_crown_block", () ->  new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, (p_152624_) -> {
         return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.PODZOL:MaterialColor.PODZOL;
     }).strength(2.0F).sound(SoundType.WOOD)));
+
+    //termite
+    public static final RegistryObject<Block> TERMITE_BLOCK_1 = Registry.BLOCKS.register("termite_block_1", () -> new TermiteBlock1(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITEB_LOCK_2 = Registry.BLOCKS.register("termite_block_2", () -> new TermiteBlock2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITE_BLOCK_3 = Registry.BLOCKS.register("termite_block_3", () -> new TermiteBlock3(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITE_BLOCK_1_POPULATED = Registry.BLOCKS.register("termite_block_1_populated", () -> new TermiteBlock1Populated(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITE_BLOCK_2_POPULATED = Registry.BLOCKS.register("termite_block_2_populated", () -> new TermiteBlock2Populated(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITE_BLOCK_3_POPULATED = Registry.BLOCKS.register("termite_block_3_populated", () -> new TermiteBlock3Populated(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> ACACIA_LOG_INFESTED = Registry.BLOCKS.register("acacia_log_infested", () -> new AcaciaLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BAOBAB_LOG_INFESTED = Registry.BLOCKS.register("baobab_log_infested", () -> new BaobabLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BIRCH_LOG_INFESTED = Registry.BLOCKS.register("birch_log_infested", () -> new BirchLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> DARK_OAK_LOG_INFESTED = Registry.BLOCKS.register("dark_oak_log_infested", () -> new DarkOakLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> JUNGLE_LOG_INFESTED = Registry.BLOCKS.register("jungle_log_infested", () -> new JungleLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MANGROVE_LOG_INFESTED = Registry.BLOCKS.register("mangrove_log_infested", () -> new MangroveLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> OAK_LOG_INFESTED = Registry.BLOCKS.register("oak_log_infested", () -> new OakLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PALM_LOG_INFESTED = Registry.BLOCKS.register("palm_log_infested", () -> new PalmLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> SPRUCE_LOG_INFESTED = Registry.BLOCKS.register("spruce_log_infested", () -> new SpruceLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     //other
     //public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffect()))

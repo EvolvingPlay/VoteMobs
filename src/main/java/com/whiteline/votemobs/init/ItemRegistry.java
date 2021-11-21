@@ -82,11 +82,12 @@ public class ItemRegistry {
     public static final RegistryObject<ForgeSpawnEggItem> MOOBLOOM_SPAWN_EGG = ItemRegistry.ITEMS.register("moobloom_spawn_egg", () -> new ForgeSpawnEggItem(Registry.MOOBLOOM, 0xf1df3d, 0xf0ecc0, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> OSTRICH_SPAWN_EGG = ItemRegistry.ITEMS.register("ostrich_spawn_egg", () -> new ForgeSpawnEggItem(Registry.OSTRICH, 0x484041, 0x8c8372, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TRMITE_SPAWN_EGG = ItemRegistry.ITEMS.register("termite_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TERMITE, 0xbc6839, 0xcba161, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<ForgeSpawnEggItem> TUMBLEWEES_SPAWN_EGG = ItemRegistry.ITEMS.register("tumbleweed_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TUMBLEWEED, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    //public static final RegistryObject<ForgeSpawnEggItem> TUMBLEWEED_SPAWN_EGG = ItemRegistry.ITEMS.register("tumbleweed_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TUMBLEWEED, 0x2a52be, 0x42aaff, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> VULTURE_SPAWN_EGG = ItemRegistry.ITEMS.register("vulture_spawn_egg", () -> new ForgeSpawnEggItem(Registry.VULTURE, 0xcba161, 0xd6ccab, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> FROG_SPAWN_EGG = ItemRegistry.ITEMS.register("frog_spawn_egg", () -> new ForgeSpawnEggItem(Registry.FROG, 0xbe7654, 0xb7976f, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> TADPOLE_SPAWN_EGG = ItemRegistry.ITEMS.register("tadpole_spawn_egg", () -> new ForgeSpawnEggItem(Registry.TADPOLE, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<ForgeSpawnEggItem> ICELOGER_SPAWN_EGG = ItemRegistry.ITEMS.register("iceloger_spawn_egg", () -> new ForgeSpawnEggItem(Registry.ICELOGER, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> TUMBLEWEED_ITEM = ItemRegistry.ITEMS.register("tumbleweed_item", () -> new ForgeSpawnEggItem(Registry.TUMBLEWEED, 0x69594a, 0x392815, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     //item_registry
     public static final RegistryObject<Item> OSTRICH_EGG = ItemRegistry.ITEMS.register("ostrich_egg", () -> new OstrichEgg(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -99,6 +100,23 @@ public class ItemRegistry {
     public static final RegistryObject<Item> FRIED_EGG = ItemRegistry.ITEMS.register("fried_egg", () -> new Item(new Item.Properties().food(Registry.FRIED_EGG).tab(CreativeModeTab.TAB_FOOD)));
     public static final RegistryObject<Item> COCONUT_DRINK = ItemRegistry.ITEMS.register("coconut_drink", () -> new Item(new Item.Properties().food(Registry.COCONUT_DRINK).tab(CreativeModeTab.TAB_FOOD)));
     public static final RegistryObject<Item> PRICKLY_PEAR_SALAD = ItemRegistry.ITEMS.register("prickly_pear_salad", () -> new Item(new Item.Properties().food(Registry.PRICKLY_PEAR_SALAD).tab(CreativeModeTab.TAB_FOOD)));
+
+    //termite
+    public static final RegistryObject<BlockItem> TERMITE_BLOCK_1 = ItemRegistry.ITEMS.register("termite_block_1", () -> new BlockItem(Registry.TERMITE_BLOCK_1.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> TERMITEB_LOCK_2 = ItemRegistry.ITEMS.register("termite_block_2", () -> new BlockItem(Registry.TERMITEB_LOCK_2.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> TERMITE_BLOCK_3 = ItemRegistry.ITEMS.register("termite_block_3", () -> new BlockItem(Registry.TERMITE_BLOCK_3.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> TERMITE_BLOCK_1_POPULATED = ItemRegistry.ITEMS.register("termite_block_1_populated", () -> new BlockItem(Registry.TERMITE_BLOCK_1_POPULATED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> TERMITE_BLOCK_2_POPULATED = ItemRegistry.ITEMS.register("termite_block_2_populated", () -> new BlockItem(Registry.TERMITE_BLOCK_2_POPULATED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> TERMITE_BLOCK_3_POPULATED = ItemRegistry.ITEMS.register("termite_block_3_populated", () -> new BlockItem(Registry.TERMITE_BLOCK_3_POPULATED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> ACACIA_LOG_INFESTED = ItemRegistry.ITEMS.register("acacia_log_infested", () -> new BlockItem(Registry.ACACIA_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BAOBAB_LOG_INFESTED = ItemRegistry.ITEMS.register("baobab_log_infested", () -> new BlockItem(Registry.BAOBAB_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> BIRCH_LOG_INFESTED = ItemRegistry.ITEMS.register("birch_log_infested", () -> new BlockItem(Registry.BIRCH_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> DARK_OAK_LOG_INFESTED = ItemRegistry.ITEMS.register("dark_oak_log_infested", () -> new BlockItem(Registry.DARK_OAK_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> JUNGLE_LOG_INFESTED = ItemRegistry.ITEMS.register("jungle_log_infested", () -> new BlockItem(Registry.JUNGLE_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> MANGROVE_LOG_INFESTED = ItemRegistry.ITEMS.register("mangrove_log_infested", () -> new BlockItem(Registry.MANGROVE_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> OAK_LOG_INFESTED = ItemRegistry.ITEMS.register("oak_log_infested", () -> new BlockItem(Registry.OAK_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> PALM_LOG_INFESTED = ItemRegistry.ITEMS.register("palm_log_infested", () -> new BlockItem(Registry.PALM_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> SPRUCE_LOG_INFESTED = ItemRegistry.ITEMS.register("spruce_log_infested", () -> new BlockItem(Registry.SPRUCE_LOG_INFESTED.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 
     public static void register(){
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

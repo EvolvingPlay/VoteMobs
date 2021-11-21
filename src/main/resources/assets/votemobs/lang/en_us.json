@@ -50,6 +50,22 @@
   "block.votemobs.baobab_fence_gate": "Baobab Fence Gate",
   "block.votemobs.baobab_pressure_plate": "Baobab Pressure Plate",
 
+  "block.votemobs.termite_block_1": "-",
+  "block.votemobs.termite_block_2": "-",
+  "block.votemobs.termite_block_3": "-",
+  "block.votemobs.termite_block_1_populated": "-",
+  "block.votemobs.termite_block_2_populated": "-",
+  "block.votemobs.termite_block_3_populated": "-",
+  "block.votemobs.acacia_log_infested": "-",
+  "block.votemobs.baobab_log_infested": "-",
+  "block.votemobs.birch_log_infested": "-",
+  "block.votemobs.dark_oak_log_infested": "-",
+  "block.votemobs.jungle_log_infested": "-",
+  "block.votemobs.mangrove_log_infested": "-",
+  "block.votemobs.oak_log_infested": "-",
+  "block.votemobs.palm_log_infested": "-",
+  "block.votemobs.spruce_log_infested": "-",
+
   "entity.votemobs.glare": "Glare",
   "entity.votemobs.allay": "Allay",
   "entity.votemobs.copper_golem": "Copper Golem",
@@ -89,10 +105,10 @@
   "item.votemobs.firefly_glass_bottle": "Firefly Glass Bottle",
   "item.votemobs.coconut_item": "Coconut",
 
-  "item.votemobs.prickly_pear_fruit": "Fetus",
+  "item.votemobs.prickly_pear_fruit": "Cactus Fruit",
   "item.votemobs.fried_egg": "Fried Egg",
   "item.votemobs.coconut_drink": "Coconut Drink",
-  "item.votemobs.prickly_pear_salad": "Fetus Salad",
+  "item.votemobs.prickly_pear_salad": "Prickly Pear Salad",
 
   "advancements.story.prickly_pear_fruit.title": "And I want and it stings",
   "advancements.story.prickly_pear_fruit.description": "Get Fetus"
