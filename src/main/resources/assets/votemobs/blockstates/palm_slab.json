@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "votemobs:block/palm_slab"
+    },
+    "type=double": {
+      "model": "votemobs:block/palm_planks"
+    },
+    "type=top": {
+      "model": "votemobs:block/palm_slab_top"
+    }
+  }
+}

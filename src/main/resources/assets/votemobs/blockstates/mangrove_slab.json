@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "votemobs:block/mangrove_slab"
+    },
+    "type=double": {
+      "model": "votemobs:block/mangrove_planks"
+    },
+    "type=top": {
+      "model": "votemobs:block/mangrove_slab_top"
+    }
+  }
+}
