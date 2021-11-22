@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
@@ -16,10 +17,7 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.entity.projectile.ThrownEgg;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.SpawnData;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.DarkOakTreeGrower;
@@ -88,7 +86,7 @@ public final class Registry {
     public static final RegistryObject<Block> WAXED_OXIDIZED_BUTTON = Registry.BLOCKS.register("waxed_oxidized_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
     public static final RegistryObject<Block> WAXED_WEATHERED_BUTTON = Registry.BLOCKS.register("waxed_weathered_button", () -> new WaxedButton(true, BlockBehaviour.Properties.copy(COPPER_BUTTON.get())));
 
-    //idk
+    //SE
     public static final RegistryObject<SoundEvent> GLARE_AMBIENT = Registry.SOUNDS.register("entity.glare.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.ambient")));
     public static final RegistryObject<SoundEvent> GLARE_HURT = Registry.SOUNDS.register("entity.glare.hurt", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.glare.hurt")));
     public static final RegistryObject<SoundEvent> ALLAY_AMBIENT = Registry.SOUNDS.register("entity.allay.ambient", () -> new SoundEvent(new ResourceLocation(VoteMobs.MOD_ID, "entity.allay.ambient")));
@@ -156,7 +154,7 @@ public final class Registry {
 
     //termite
     public static final RegistryObject<Block> TERMITE_BLOCK_1 = Registry.BLOCKS.register("termite_block_1", () -> new TermiteBlock1(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> TERMITEB_LOCK_2 = Registry.BLOCKS.register("termite_block_2", () -> new TermiteBlock2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> TERMITE_BLOCK_2 = Registry.BLOCKS.register("termite_block_2", () -> new TermiteBlock2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> TERMITE_BLOCK_3 = Registry.BLOCKS.register("termite_block_3", () -> new TermiteBlock3(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> TERMITE_BLOCK_1_POPULATED = Registry.BLOCKS.register("termite_block_1_populated", () -> new TermiteBlock1Populated(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> TERMITE_BLOCK_2_POPULATED = Registry.BLOCKS.register("termite_block_2_populated", () -> new TermiteBlock2Populated(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -171,8 +169,18 @@ public final class Registry {
     public static final RegistryObject<Block> PALM_LOG_INFESTED = Registry.BLOCKS.register("palm_log_infested", () -> new PalmLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> SPRUCE_LOG_INFESTED = Registry.BLOCKS.register("spruce_log_infested", () -> new SpruceLogInfested(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    //Cactus
+    public static final RegistryObject<Block> PRICKLY_PEAR_BIG_PAD = Registry.BLOCKS.register("prickly_pear_big_pad", () -> new PricklyPearBigPad(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PRICKLY_PEAR_SMALL_PAD_FETUS_STAGE_1 = Registry.BLOCKS.register("prickly_pear_small_pad_fetus_stage1", () -> new PricklyPearSmallPadFetusStage1(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PRICKLY_PEAR_SMALL_PAD_FETUS_STAGE_2 = Registry.BLOCKS.register("prickly_pear_small_pad_fetus_stage2", () -> new PricklyPearSmallPadFetusStage2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PRICKLY_PEAR_SMALL_PAD_STAGE_1 = Registry.BLOCKS.register("prickly_pear_small_pad_stage1", () -> new PricklyPearSmallPadStage1(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PRICKLY_PEAR_SMALL_PAD_STAGE_2 = Registry.BLOCKS.register("prickly_pear_small_pad_stage2", () -> new PricklyPearSmallPadStage2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PRICKLY_PEAR_BIG_PAD = Registry.BLOCKS.register("stripped_prickly_pear_big_pad", () -> new StrippedPricklyPearBigPad(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PRICKLY_PEAR_SMALL_PAD_STAGE_1 = Registry.BLOCKS.register("stripped_prickly_pear_small_pad_stage1", () -> new StrippedPricklyPearSmallPadStage1(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PRICKLY_PEAR_SMALL_PAD_STAGE_2 = Registry.BLOCKS.register("stripped_prickly_pear_small_pad_stage2", () -> new StrippedPricklyPearSmallPadStage2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
     //other
-    //public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffect()))
+    public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffects.NIGHT_VISION, 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<EntityType<ThrowableItemProjectile>> THROWN_OSTRICH_EGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.<ThrowableItemProjectile>of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
 
     //food

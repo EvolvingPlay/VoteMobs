@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "votemobs:block/buttercup"
+    "cross": "votemobs:items/buttercup"
   }
 }
