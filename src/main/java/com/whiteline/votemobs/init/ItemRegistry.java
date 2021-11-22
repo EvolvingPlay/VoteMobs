@@ -96,7 +96,7 @@ public class ItemRegistry {
 
     //item_registry
     public static final RegistryObject<Item> OSTRICH_EGG = ItemRegistry.ITEMS.register("ostrich_egg", () -> new OstrichEgg(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<Item> FIREFLY_GLASS_BOTTLE = ItemRegistry.ITEMS.register("firefly_glass_bottle", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<ForgeSpawnEggItem> FIREFLY_GLASS_BOTTLE = ItemRegistry.ITEMS.register("firefly_glass_bottle", () -> new ForgeSpawnEggItem(Registry.FIREFLY, 0xFFFFFF, 0xFFFFFF, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> TENTACLE = ItemRegistry.ITEMS.register("tentacle", () -> new LeadItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> COCONUT_ITEM = ItemRegistry.ITEMS.register("coconut_item", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     //public static final RegistryObject<Item> TADPOLE_BUCKET = ItemRegistry.ITEMS.register("tadpole_bucket", () -> new MobBucketItem(Registry.TADPOLE.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_AXOLOTL, (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_MISC)));

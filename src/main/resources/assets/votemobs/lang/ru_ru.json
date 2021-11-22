@@ -21,7 +21,7 @@
   "block.votemobs.mangrove_root": "Мангровые корни",
   "block.votemobs.mangrove_fence": "Мангровый забор",
   "block.votemobs.mangrove_fence_gate": "Мангровая калитка",
-  "block.votemobs.mangrove_pressure_plate": "Mangrove Pressure Plate",
+  "block.votemobs.mangrove_pressure_plate": "Мангровая нажимная плита",
   "block.votemobs.palm_door": "Пальмовая дверь",
   "block.votemobs.palm_leaves": "Пальмовые листья",
   "block.votemobs.palm_log": "Пальмовое бревно",
@@ -124,5 +124,7 @@
   "item.votemobs.tadpole_bucket": "Головастик в ведре",
 
   "advancements.story.prickly_pear_fruit.title": "И хочется и колется",
-  "advancements.story.prickly_pear_fruit.description": "Добудьте кактусовый фрукт"
+  "advancements.story.prickly_pear_fruit.description": "Добудьте кактусовый фрукт",
+  "advancements.story.somebody.title": "Самбади ванс толд ми",
+  "advancements.story.somebody.description": "Пройдите через дверь из мангровой древесины"
 }

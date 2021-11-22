@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "votemobs:mangrove_door"
+    },
+    "title": {
+      "translate": "advancements.story.somebody.title"
+    },
+    "description": {
+      "translate": "advancements.story.somebody.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "diamond": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "votemobs:mangrove_door"
+      }
+    }
+  }
+}
