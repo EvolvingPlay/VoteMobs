@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bowl"
+    },
+    "X": [
+      {
+        "item": "votemobs:stripped_prickly_pear_big_pad"
+      }
+    ]
+  },
+  "result": {
+    "item": "votemobs:prickly_pear_salad",
+    "count": 1
+  }
+}

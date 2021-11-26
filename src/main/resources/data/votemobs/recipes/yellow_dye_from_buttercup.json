@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "yellow_dye",
+  "ingredients": [
+    {
+      "item": "votemobs:buttercup"
+    }
+  ],
+  "result": {
+    "item": "minecraft:yellow_dye"
+  }
+}

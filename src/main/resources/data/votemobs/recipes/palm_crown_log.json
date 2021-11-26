@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "yellow_dye",
+  "ingredients": [
+    {
+      "item": "votemobs:palm_crown_log"
+    }
+  ],
+  "result": {
+    "item": "votemobs:palm_planks",
+    "count": 4
+  }
+}

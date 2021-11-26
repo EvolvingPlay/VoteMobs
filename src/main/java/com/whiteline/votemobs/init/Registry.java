@@ -180,7 +180,7 @@ public final class Registry {
     public static final RegistryObject<Block> STRIPPED_PRICKLY_PEAR_SMALL_PAD_STAGE_2 = Registry.BLOCKS.register("stripped_prickly_pear_small_pad_stage2", () -> new StrippedPricklyPearSmallPadStage2(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_ORANGE).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     //other
-    public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffects.NIGHT_VISION, 5, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> BUTTERCUP = Registry.BLOCKS.register("buttercup", () -> new FlowerBlock(MobEffects.INVISIBILITY, 8, BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final RegistryObject<EntityType<ThrowableItemProjectile>> THROWN_OSTRICH_EGG = Registry.ENTITIES.register("thrown_ostrich_egg", () -> EntityType.Builder.<ThrowableItemProjectile>of(ThrownOstrichEgg::new, MobCategory.MISC).sized(1, 1).build(VoteMobs.MOD_ID+"thrown_ostrich_egg"));
 
     //food

@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "votemobs:block/palm_log_horizontal",
+      "model": "votemobs:block/palm_crown_block",
       "x": 90,
       "y": 90
     },

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "votemobs:stripped_prickly_pear_big_pad"
+  },
+  "result": "minecraft:lime_dye",
+  "experience": 0.15,
+  "cookingtime": 200
+}

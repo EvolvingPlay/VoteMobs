@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "votemobs:block/mangrove_root"
-    }
-  }
+	"variants": {
+		"": {
+			"model": "votemobs:block/mangrove_root"
+		}
+	}
 }

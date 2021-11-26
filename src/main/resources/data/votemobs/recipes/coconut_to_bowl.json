@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "yellow_dye",
+  "ingredients": [
+    {
+      "item": "votemobs:coconut_item"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bowl",
+    "count": 2
+  }
+}
